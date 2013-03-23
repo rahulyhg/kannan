@@ -1,0 +1,102 @@
+@mybackground-color: #080808;
+ @base-font-size: 22px;
+ @mynavigation-color: #ea8900;
+ @mynormalfont-color: #ffffff;
+ @myMainHeadingHighlight: #ff9600;
+ @myIntroHeadingShadow: #e6e6d7;
+ @myIntroTextShadow:#e9e9d8;
+ @mySectionColor: #000000;
+ @myServicesSection:#1a1a1a;
+ @myServicesSectionHeading:#f79e04;
+ * {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: @mybackground-color;
+    margin: 131px 0px 0px 0px;
+    width: 100%;
+    min-width: 960px;
+    line-height: (@base-font-size * 1.2);
+    color:@mynormalfont-color;
+}
+.nav-heading {
+    color: @mynavigation-color;
+}
+#menubar {
+    display: block;
+    height: 49px;
+    top: 0;
+    background: @mySectionColor;
+    width: 960px;
+    margin: auto;
+}
+.horiz-section {
+    width: 100%;
+    /* padding: 15px 7.5% 15px 7.5%; */
+    padding: 39px 10px 10px 37px;
+}
+.horiz-section-content {
+    width: 960px;
+    margin: 30 auto;
+}
+#intro-sec {
+    background: @mySectionColor;
+    background-image:url('../images/vedic_astrology.png');
+    text-align: right;
+    padding-right:10px;
+    height: 467px;
+    width:960px;
+    margin: auto;
+}
+#intro-heading {
+    font-size: (3 * @base-font-size);
+    color: @myMainHeadingHighlight;
+    height:300px;
+    width: 200px;
+    padding: 2px 2px 2px 2px;
+    text-shadow: 2px 2px @myIntroHeadingShadow;
+}
+#introSub-heading {
+  font-size: 33px;
+  height: 30px;
+  width: 600px;
+    float:right;
+  padding: 5px 2px 2px 2px;
+}
+#shaded-text{
+    font-size: (1.5 * @base-font-size);
+    color: @myMainHeadingHighlight;
+    word-wrap:break-word;
+    float: right;
+    text-shadow: 2px 2px @myIntroTextShadow;
+    height: 150px;
+    width:400px;
+    padding: 141px 2px 2px 2px;
+}
+#vedic-astrology {
+    background: @mySectionColor;
+    height: 345px;
+    margin:auto;
+    width: 960px;
+}
+h1 {
+    font-size : (2 * @base-font-size);
+}
+#vedicAstro_text{
+    height: 214px;
+    width:450px;
+    padding: 30px 2px 2px 2px;
+}
+#vedic-img {
+  margin-left:455px;
+  margin-top: -270px;
+  padding: 5px;
+  }
+#services{
+    background: @mySectionColor;
+    height: 345px;
+    margin:auto;
+    width: 960px;
+    
+}
