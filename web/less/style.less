@@ -8,6 +8,7 @@
  @mySectionColor: #000000;
  @myServicesSection:#1a1a1a;
  @myServicesSectionHeading:#f79e04;
+ @mybannerHeadingColor:#ffa200;
  * {
     padding: 0;
     margin: 0;
@@ -34,7 +35,7 @@ body {
 .horiz-section {
     width: 100%;
     /* padding: 15px 7.5% 15px 7.5%; */
-    padding: 39px 10px 10px 37px;
+    padding: 39px 10px 10px 40px;
 }
 .horiz-section-content {
     width: 960px;
@@ -58,13 +59,13 @@ body {
     text-shadow: 2px 2px @myIntroHeadingShadow;
 }
 #introSub-heading {
-  font-size: 33px;
-  height: 30px;
-  width: 600px;
+    font-size: 33px;
+    height: 30px;
+    width: 600px;
     float:right;
-  padding: 5px 2px 2px 2px;
+    padding: 5px 2px 2px 2px;
 }
-#shaded-text{
+#shaded-text {
     font-size: (1.5 * @base-font-size);
     color: @myMainHeadingHighlight;
     word-wrap:break-word;
@@ -83,20 +84,87 @@ body {
 h1 {
     font-size : (2 * @base-font-size);
 }
-#vedicAstro_text{
+#vedicAstro_text {
     height: 214px;
     width:450px;
     padding: 30px 2px 2px 2px;
 }
 #vedic-img {
-  margin-left:455px;
-  margin-top: -270px;
-  padding: 5px;
-  }
-#services{
+    margin-left:455px;
+    margin-top: -270px;
+    padding: 5px;
+}
+#services {
     background: @mySectionColor;
-    height: 345px;
+    background-image: url('../images/servicesBackground.png');
+    background-repeat: no-repeat;
+    height: 764px;
     margin:auto;
     width: 960px;
-    
+}
+.section {
+    background-color:@myServicesSection;
+    height: 420px;
+    width: 220px;
+    margin-top: 27px;
+    padding: 12px 16px 33px 13px;
+}
+#left-align {
+    margin-left: 40px;
+}
+#right-align {
+    float: right;
+    margin-top: -466px;
+    margin-right: 55px;
+}
+#middle-align {
+    margin-top: -466px;
+    margin-left: 347px;
+}
+#servicesSectionHeading {
+    color: @myServicesSectionHeading;
+    font-size: (1.15 * @base-font-size);
+    height: 47px;
+    padding: 2px 2px 17px 2px;
+}
+/*mixins*/
+ .text-properties(@color, @font-size, @font-multiplier, @margin-top, @margin-right, @margin-bottom:0px, @margin-left) {
+    color:@color;
+    font-size: (@font-multiplier * @font-size);
+    margin:@margin-top @margin-right @margin-bottom @margin-left;
+}
+#banner-heading-center {
+    .text-properties(@mybannerHeadingColor, @base-font-size, 1.15, 44px, 169px, 0px, 161px);
+}
+#banner-heading-left {
+    .text-properties(@mybannerHeadingColor, @base-font-size, 1.15, 30px, 290px, 0px, 40px);
+}
+#banner-heading-right {
+    .text-properties(@mybannerHeadingColor, @base-font-size, 1.15, 28px, 103px, 0px, 223px);
+}
+#sub-title1 {
+    .text-properties(@mynormalfont-color, @base-font-size, 1.05, 0px, 148px, 0px, 486px);
+}
+#sub-title2 {
+    .text-properties(@mynormalfont-color, @base-font-size, 1.05, 0px, 606px, 0px, 103px);
+}
+#sub-title3 {
+    .text-properties(@mynormalfont-color, @base-font-size, 1.05, 0px, 64px, 0px, 732px);
+}
+#achievements {
+    background: @mySectionColor;
+    height: 280px;
+    margin:auto;
+    width: 960px;
+}
+#styleList_achievemnt {
+    .text-properties(@mynormalfont-color, @base-font-size, 1.0, 16px, 98px, 12px, 42px);
+    list-style-image: url('../images/star.png');
+}
+
+#contact {
+    background: @mySectionColor;
+    height:423px;
+    margin:auto;
+    width: 960px;
 }
