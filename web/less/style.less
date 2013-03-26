@@ -1,6 +1,7 @@
 @mybackground-color: #080808;
- @base-font-size: 22px;
+ @base-font-size: 16px;
  @mynavigation-color: #ea8900;
+ @myfontStyle: arial;
  @mynormalfont-color: #ffffff;
  @myMainHeadingHighlight: #ff9600;
  @myIntroHeadingShadow: #e6e6d7;
@@ -15,22 +16,25 @@
 }
 body {
     background: @mybackground-color;
-    margin: 131px 0px 0px 0px;
+    font-family: @myfontStyle;
+    margin: 0px 0px 0px 0px;
     width: 100%;
     min-width: 960px;
     line-height: (@base-font-size * 1.2);
     color:@mynormalfont-color;
 }
+.top-sec {
+    position: fixed;
+    z-index: 20;
+    background: @mySectionColor;
+    text-align:center;
+    margin-left:124px;
+    padding-right:70px;
+    font-size : (1.5 * @base-font-size);
+}
 .nav-heading {
     color: @mynavigation-color;
-}
-#menubar {
-    display: block;
-    height: 49px;
-    top: 0;
-    background: @mySectionColor;
-    width: 960px;
-    margin: auto;
+    margin-left: 100px;
 }
 .horiz-section {
     width: 100%;
@@ -41,39 +45,34 @@ body {
     width: 960px;
     margin: 30 auto;
 }
+/*mixins*/
+ .text-properties(@color, @font-size, @font-multiplier, @margin-top, @margin-right, @margin-bottom:0px, @margin-left) {
+    color:@color;
+    font-size: (@font-multiplier * @font-size);
+    margin:@margin-top @margin-right @margin-bottom @margin-left;
+}
 #intro-sec {
     background: @mySectionColor;
     background-image:url('../images/vedic_astrology.png');
-    text-align: right;
     padding-right:10px;
     height: 467px;
     width:960px;
     margin: auto;
 }
 #intro-heading {
-    font-size: (3 * @base-font-size);
-    color: @myMainHeadingHighlight;
-    height:300px;
-    width: 200px;
-    padding: 2px 2px 2px 2px;
+    .text-properties(@myMainHeadingHighlight, @base-font-size, 3, 37px, 0px, 0px, 446px);
+    line-height: 110%;
     text-shadow: 2px 2px @myIntroHeadingShadow;
 }
 #introSub-heading {
-    font-size: 33px;
-    height: 30px;
-    width: 600px;
-    float:right;
-    padding: 5px 2px 2px 2px;
+    .text-properties(@mynormalfont-color, @base-font-size, 1.75, 80px, 0px, 0px, 400px);
+    padding: 2px;
+    line-height: 100%;
 }
-#shaded-text {
-    font-size: (1.5 * @base-font-size);
-    color: @myMainHeadingHighlight;
-    word-wrap:break-word;
-    float: right;
+#textShading {
+    .text-properties(@myMainHeadingHighlight, @base-font-size, 1.75, 250px, 10px, 0px, 660px);
     text-shadow: 2px 2px @myIntroTextShadow;
-    height: 150px;
-    width:400px;
-    padding: 141px 2px 2px 2px;
+    line-height: 100%;
 }
 #vedic-astrology {
     background: @mySectionColor;
@@ -105,6 +104,7 @@ h1 {
 .section {
     background-color:@myServicesSection;
     height: 420px;
+    line-height:160%;
     width: 220px;
     margin-top: 27px;
     padding: 12px 16px 33px 13px;
@@ -114,42 +114,36 @@ h1 {
 }
 #right-align {
     float: right;
-    margin-top: -466px;
+    margin-top: -465px;
     margin-right: 55px;
 }
 #middle-align {
-    margin-top: -466px;
+    margin-top: -465px;
     margin-left: 347px;
 }
 #servicesSectionHeading {
     color: @myServicesSectionHeading;
-    font-size: (1.15 * @base-font-size);
+    font-size: (1.35 * @base-font-size);
     height: 47px;
     padding: 2px 2px 17px 2px;
 }
-/*mixins*/
- .text-properties(@color, @font-size, @font-multiplier, @margin-top, @margin-right, @margin-bottom:0px, @margin-left) {
-    color:@color;
-    font-size: (@font-multiplier * @font-size);
-    margin:@margin-top @margin-right @margin-bottom @margin-left;
-}
 #banner-heading-center {
-    .text-properties(@mybannerHeadingColor, @base-font-size, 1.15, 44px, 169px, 0px, 161px);
+    .text-properties(@mybannerHeadingColor, @base-font-size, 1.35, 44px, 169px, 0px, 161px);
 }
 #banner-heading-left {
-    .text-properties(@mybannerHeadingColor, @base-font-size, 1.15, 30px, 290px, 0px, 40px);
+    .text-properties(@mybannerHeadingColor, @base-font-size, 1.35, 30px, 290px, 0px, 40px);
 }
 #banner-heading-right {
-    .text-properties(@mybannerHeadingColor, @base-font-size, 1.15, 28px, 103px, 0px, 223px);
+    .text-properties(@mybannerHeadingColor, @base-font-size, 1.35, 28px, 103px, 0px, 223px);
 }
 #sub-title1 {
-    .text-properties(@mynormalfont-color, @base-font-size, 1.05, 0px, 148px, 0px, 486px);
+    .text-properties(@mynormalfont-color, @base-font-size, 1.25, 0px, 148px, 0px, 486px);
 }
 #sub-title2 {
-    .text-properties(@mynormalfont-color, @base-font-size, 1.05, 0px, 606px, 0px, 103px);
+    .text-properties(@mynormalfont-color, @base-font-size, 1.25, 0px, 606px, 0px, 103px);
 }
 #sub-title3 {
-    .text-properties(@mynormalfont-color, @base-font-size, 1.05, 0px, 64px, 0px, 732px);
+    .text-properties(@mynormalfont-color, @base-font-size, 1.25, 0px, 64px, 0px, 732px);
 }
 #achievements {
     background: @mySectionColor;
@@ -159,7 +153,6 @@ h1 {
 }
 #styleList_achievemnt {
     .text-properties(@mynormalfont-color, @base-font-size, 1.0, 16px, 98px, 12px, 42px);
-    list-style-image: url('../images/star.png');
 }
 #contact {
     background: @mySectionColor;
@@ -173,10 +166,12 @@ h1 {
     margin-right: 550px;
 }
 #contactHeading {
+    font-size: (1.25 * @base-font-size);
     color: @mybannerHeadingColor;
 }
 #contact-right-sec {
     height: 314px;
-    margin-top: -314px;
+    line-height: 200%;
+    margin-top: -320px;
     margin-left: 429px;
 }
