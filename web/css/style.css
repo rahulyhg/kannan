@@ -52,10 +52,9 @@ body {
 }
 #introSub-heading {
   color: #ffffff;
-  font-size: 28px;
+  font-size: 29.6px;
   margin: 80px 0px 0px 400px;
-  padding: 2px;
-  line-height: 100%;
+  line-height: 150%;
 }
 #textShading {
   color: #ff9600;
@@ -93,7 +92,7 @@ h1 {
 }
 .section {
   background-color: #1a1a1a;
-  height: 420px;
+  height: 400px;
   line-height: 160%;
   width: 220px;
   margin-top: 27px;
@@ -104,14 +103,14 @@ h1 {
 }
 #right-align {
   float: right;
-  margin-top: -465px;
+  margin-top: -445px;
   margin-right: 55px;
 }
 #middle-align {
-  margin-top: -465px;
+  margin-top: -445px;
   margin-left: 347px;
 }
-#servicesSectionHeading {
+.servicesSectionHeading {
   color: #f79e04;
   font-size: 21.6px;
   height: 47px;
@@ -119,32 +118,32 @@ h1 {
 }
 #banner-heading-center {
   color: #ffa200;
-  font-size: 21.6px;
-  margin: 44px 169px 0px 161px;
+  font-size: 24px;
+  margin: 60px 169px 0px 161px;
 }
 #banner-heading-left {
   color: #ffa200;
-  font-size: 21.6px;
+  font-size: 24px;
   margin: 30px 290px 0px 40px;
 }
 #banner-heading-right {
   color: #ffa200;
-  font-size: 21.6px;
+  font-size: 24px;
   margin: 28px 103px 0px 223px;
 }
 #sub-title1 {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 21.6px;
   margin: 0px 148px 0px 486px;
 }
 #sub-title2 {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 21.6px;
   margin: 0px 606px 0px 103px;
 }
 #sub-title3 {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 21.6px;
   margin: 0px 64px 0px 732px;
 }
 #achievements {
