@@ -23,14 +23,16 @@ body {
     line-height: (@base-font-size * 1.2);
     color:@mynormalfont-color;
 }
-.top-sec {
+#top-sec{
+    padding-top: 2px;
+    font-size: (1.55 * @base-font-size);
+    background-color:@mySectionColor;
     position: fixed;
     z-index: 20;
-    background: @mySectionColor;
-    text-align:center;
-    margin-left:124px;
-    padding-right:70px;
-    font-size : (1.5 * @base-font-size);
+}
+#smallerText {
+    font-size : (0.85 * @base-font-size);
+    text-decoration: none;
 }
 .nav-heading {
     color: @mynavigation-color;
@@ -173,4 +175,6 @@ h1 {
     line-height: 200%;
     margin-top: -320px;
     margin-left: 429px;
+    background-image: url('../images/contactSecImage.png');
+    background-repeat: no-repeat;
 }

@@ -11,14 +11,16 @@ body {
   line-height: 19.2px;
   color: #ffffff;
 }
-.top-sec {
+#top-sec {
+  padding-top: 2px;
+  font-size: 24.8px;
+  background-color: #000000;
   position: fixed;
   z-index: 20;
-  background: #000000;
-  text-align: center;
-  margin-left: 124px;
-  padding-right: 70px;
-  font-size: 24px;
+}
+#smallerText {
+  font-size: 13.6px;
+  text-decoration: none;
 }
 .nav-heading {
   color: #ea8900;
@@ -177,4 +179,6 @@ h1 {
   line-height: 200%;
   margin-top: -320px;
   margin-left: 429px;
+  background-image: url('../images/contactSecImage.png');
+  background-repeat: no-repeat;
 }
