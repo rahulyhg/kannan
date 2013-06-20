@@ -165,6 +165,7 @@ h1 {
   height: 423px;
   margin: auto;
   width: 960px;
+  background-image: url('../images/planet-on-edge.png');
 }
 #contact-left-sec {
   height: 314px;
@@ -179,7 +180,6 @@ h1 {
   height: 314px;
   line-height: 200%;
   margin-top: -320px;
-  margin-left: 429px;
-  background-image: url('../images/planet-on-edge.png');
+  margin-left: 275px;
   background-repeat: no-repeat;
 }
